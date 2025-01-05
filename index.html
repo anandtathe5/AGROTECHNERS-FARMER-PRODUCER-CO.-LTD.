@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrotechners Farmer Producer Co. Ltd.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        header {
+            background-color: #2a9d8f;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+
+        header img {
+            height: 50px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            position: relative;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            color: #264653;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #e9f5f4;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #264653;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            background-color: #2a9d8f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #21867a;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Flexbox for aligning images side by side on larger screens */
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .image-row img {
+            max-width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media query for smaller screens to stack images in a column */
+        @media (max-width: 768px) {
+            .image-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-row img {
+                max-width: 90%; /* Adjust to fit mobile screens */
+                margin-bottom: 1rem; /* Add space between images */
+            }
+        }
+
+        /* Style for the poster image covering the sections */
+        .poster-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Make the image cover the full width */
+            height: 100%; /* Make the image cover the full height */
+            object-fit: cover; /* Ensure the image maintains aspect ratio */
+            z-index: -1; /* Lower z-index to make it appear behind the text */
+            opacity: 0.3; /* Light opacity for background effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image (6).jpg" alt="Farmer Image">
+        <h1>Agrotechners Farmer Producer Co. Ltd.</h1>
+    </header>
+
+    <div class="container">
+        <img src="image (6).jpg" alt="Poster" class="poster-image">
+
+        <section>
+            <h2>आमच्याबद्दल</h2>
+            <p>कंपन्या कायद्यांतर्गत नोंदणीकृत, एग्रो टेक्नर्स फार्मर प्रोड्युसर को. लि. बांबूपासून सेंद्रिय खते आणि इंधन उत्पादनावर लक्ष केंद्रित करते. आम्ही जमिनीची सुपीकता सुधारण्यासाठी, कार्बन उत्सर्जन कमी करण्यासाठी आणि सेंद्रिय अन्नास प्रोत्साहन देण्यासाठी उपाय प्रदान करतो.</p>
+        </section>
+
+        <section>
+            <h2>आमचे उद्दिष्ट</h2>
+            <p>शेतकऱ्यांना योग्य किंमती सुनिश्चित करून, खर्च कमी करून आणि अतिरिक्त उत्पन्न स्रोत तयार करून मदत करणे हे आमचे उद्दिष्ट आहे. ग्लोबल वॉर्मिंगचा सामना करण्यासाठी आणि पर्यावरणपूरक पद्धतींचे प्रचार करण्यासाठी आम्ही शून्य कार्बन उत्सर्जनाला प्राधान्य देतो.</p>
+        </section>
+
+        <section>
+            <h2>About Us</h2>
+            <p>Registered under the Companies Act, Agrotechners Farmer Producer Co. Ltd. focuses on bamboo-based organic fertilizers and fuels. We aim to provide solutions for soil fertility, reduce carbon emissions, and promote organic food.</p>
+        </section>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p>Our goal is to support farmers by ensuring fair pricing, reducing costs, and generating additional income sources. We prioritize zero carbon emissions to combat global warming and promote eco-friendly practices.</p>
+        </section>
+
+        <section>
+            <h2>Products and Benefits</h2>
+            <div class="image-row">
+                <img src="image1.jpg" alt="image1">
+                <img src="image2.jpg" alt="image2">
+                <img src="image3.jpg" alt="image3">
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Organic Fertilizers</h3>
+                    <ul>
+                        <li>Cost-effective</li>
+                        <li>Pollution-free</li>
+                        <li>Soil improvement</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Green Fuels</h3>
+                    <ul>
+                        <li>Renewable energy source</li>
+                        <li>Zero carbon emissions</li>
+                        <li>Eco-friendly</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Competitive Advantages</h2>
+            <ul>
+                <li>High profitability</li>
+                <li>Quick revenue generation</li>
+                <li>Employment opportunities</li>
+                <li>Advanced quality testing labs</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project Location</h2>
+            <p>Located on National Highway No 3, near Dhule, Maharashtra, our site ensures easy accessibility and operational efficiency.</p>
+            <p>View our location on <a href="https://maps.app.goo.gl/Efxc9wjAyqDhmkaL8" target="_blank">Google Maps</a>.</p>
+        </section>
+
+        <section>
+            <h2>Marketing and Outreach</h2>
+            <p>We leverage digital platforms, including our website, Amazon, and Flipkart, to promote and sell our products. Customers can access product information, place orders online, and receive timely support.</p>
+            <a href="#" class="btn">Visit Our Website</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Agrotechners Farmer Producer Co. Ltd. All rights reserved.</p>
+        <p>Customer Care No. 9172568756 | Email: agrotechners@gmail.com</p>
+        <p>Factory & Office: Gat No. 364/2, Deobhane, Tal. Dist. Dhule, PIN CODE 424307, MAHARASHTRA, BHARAT</p>
+        <a href="https://wa.me/9172568756" class="btn" target="_blank">Contact Us on WhatsApp</a>
+    </footer>
+    
+</body>
+</html>
