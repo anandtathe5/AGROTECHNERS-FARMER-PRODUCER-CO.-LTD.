@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrotechners Farmer Producer Co. Ltd.</title>
     <style>
-        body {
+        body {  
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -15,17 +15,23 @@
         }
 
         header {
-            background-color: #2a9d8f;
-            color: #fff;
-            padding: 1rem 2rem;
-            text-align: left;
+            position: relative;
+            height: 300px;
+            background: url('farm.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
-            text-align: center;
+            font-size: 2.5rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
         .container {
@@ -38,7 +44,7 @@
             margin-bottom: 2rem;
         }
 
-        h2 {
+        h2, h3 {
             color: #264653;
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
@@ -49,6 +55,23 @@
         p {
             margin-bottom: 1rem;
             text-align: justify;
+        }
+
+        .intro-section {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .intro-section img {
+            max-width: 40%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-text {
+            flex: 1;
         }
 
         ul {
@@ -71,6 +94,43 @@
             position: relative;
             bottom: 0;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        footer .contact-form {
+            max-width: 500px;
+            width: 100%;
+            margin: 1rem auto;
+            padding: 1rem;
+            background-color: #2a9d8f;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .contact-form input,
+        footer .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        footer .contact-form button {
+            padding: 0.8rem 1.5rem;
+            background-color: #264653;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        footer .contact-form button:hover {
+            background-color: #2a9d8f;
         }
 
         .btn {
@@ -108,31 +168,91 @@
 
         .image-row {
             display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
             justify-content: space-between;
-            gap: 1rem;
-            flex-wrap: wrap;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .image-row img {
-            max-width: 30%;
+            width: 100%;
+            max-width: 33%;
+            height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
+        .image-row img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Mobile responsiveness */
         @media (max-width: 768px) {
             .image-row {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .image-row img {
+                max-width: 100%;
+            }
+
+            .intro-section {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .image-row img {
-                max-width: 90%;
-                margin-bottom: 1rem;
+            .intro-section img {
+                max-width: 80%;
+            }
+
+            footer .contact-form {
+                width: 100%;
+                margin: 1rem 0;
             }
         }
 
-        .poster-image {
-            display: none; /* Removed background image */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Added styles for map section */
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .map-section {
+            text-align: center;
+            flex: 1;
+        }
+
+        .map-section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .map-section img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -142,24 +262,21 @@
     </header>
 
     <div class="container">
+        <section class="intro-section">
+            <img src="farm.jpg" alt="Introductory Image">
+            <div class="intro-text">
+                <h2>Agrotechners</h2>
+                <p>Registered under the Companies Act, Agrotechners Farmer Producer Co. Ltd. focuses on bamboo-based organic fertilizers and fuels. We aim to provide solutions for soil fertility, reduce carbon emissions, and promote organic food.</p>
+            </div>
+        </section>
+
         <section>
             <h2>आमच्याबद्दल</h2>
             <p>कंपन्या कायद्यांतरगत नोंदणीकृत, एग्रो टेक्नर्स फार्मर प्रोड्युसर को. लि. बांबूपासून संद्रिय खते आणि इंधन उत्पादनावर लक्ष करते. आम्ही जमीनीची सुपीकता सुधारण्या, कार्बन उत्सर्जन कमी करण्यासठी आणि संद्रिय अन्नास प्रोत्साहन देतो.</p>
         </section>
 
         <section>
-            <h2>About Us</h2>
-            <p>Registered under the Companies Act, Agrotechners Farmer Producer Co. Ltd. focuses on bamboo-based organic fertilizers and fuels. We aim to provide solutions for soil fertility, reduce carbon emissions, and promote organic food.</p>
-        </section>
-
-        <section>
             <h2>Products and Benefits</h2>
-            <div class="image-row">
-                <img src="image1.jpg" alt="image1">
-                <img src="image2.jpg" alt="image2">
-                <img src="image3.jpg" alt="image3">
-            </div>
-
             <div class="grid">
                 <div class="card">
                     <h3>Organic Fertilizers</h3>
@@ -178,6 +295,12 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="image-row">
+                <img src="image1.jpg" alt="image1">
+                <img src="image2.jpg" alt="image2">
+                <img src="image3.jpg" alt="image3">
+            </div>
         </section>
     </div>
 
@@ -186,6 +309,27 @@
         <p>Customer Care No. 9172568756 | Email: agrotechners@gmail.com</p>
         <p>Factory & Office: Gat No. 364/2, Deobhane, Tal. Dist. Dhule, PIN CODE 424307, MAHARASHTRA, BHARAT</p>
         <a href="https://wa.me/9172568756" class="btn" target="_blank">Contact Us on WhatsApp</a>
+
+        <div class="footer-content">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <form action="#" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h3>Location</h3>
+                <a href="https://maps.app.goo.gl/Efxc9wjAyqDhmkaL8" target="_blank">
+                    <img src="map.png" alt="Map Location">
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
